@@ -1,0 +1,16 @@
+{
+	"manifest_version": 1,
+	"id": "eau.aram.toc",
+	"app_min_version": "3.3",
+	"version": "1.0.0",
+	"name": "Eau Table of Contents",
+	"description": "Simple plugin to insert into the current file a table of contents of that file",
+	"author": "Ivan Aram Gonzalez Su",
+	"homepage_url": "https://github.com/IvanAram1107/joplin.eau-toc",
+	"repository_url": "https://github.com/IvanAram1107/joplin.eau-toc",
+	"keywords": [],
+	"categories": [],
+	"screenshots": [],
+	"icons": {},
+	"promo_tile": {}
+}
