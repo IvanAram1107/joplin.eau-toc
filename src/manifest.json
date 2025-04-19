@@ -1,8 +1,8 @@
 {
 	"manifest_version": 1,
-	"id": "eau.aram.toc",
-	"app_min_version": "3.3",
-	"version": "1.0.0",
+	"id": "eau.aram.table-of-contents",
+	"app_min_version": "3.2",
+	"version": "1.0.1",
 	"name": "Eau Table of Contents",
 	"description": "Simple plugin to insert into the current file a table of contents of that file",
 	"author": "Ivan Aram Gonzalez Su",
