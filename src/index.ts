@@ -16,7 +16,7 @@ function getHeaders(body: string) {
 	const lines = body.split('\n');
 	for (const line of lines) {
 			const match = line.match(/^#(#+)\s(.*)*/);
-			if (!match || match[2] === "TOC") continue;
+			if (!match) continue;
 			headers.push({
 				level: match[1].length - 1,
 				text: match[2],
@@ -33,7 +33,7 @@ async function insertToc() {
 	});
 	const headers = getHeaders(note.body);
 	const newLines = [
-		"\n## TOC\n", 
+		"## Table of Contents\n", 
 		...headers.map(h => "  " + `${'  '.repeat(2 * h.level)}* [${h.text}](#${convertToSlug(h.text)})`)
 	];
 	const bodyLines = note.body.split("\n");
