@@ -11,8 +11,13 @@ function convertToSlug(text: string): string {
 	return num > 1 ? `${converted}-${num}` : converted;
 }
 
+type Header = {
+	level: number;
+	text: string;
+};
+
 function getHeaders(body: string) {
-	const headers = [];
+	const headers: Header[] = [];
 	const lines = body.split('\n');
 	for (const line of lines) {
 			const match = line.match(/^#(#+)\s(.*)*/);
@@ -21,6 +26,10 @@ function getHeaders(body: string) {
 				level: match[1].length - 1,
 				text: match[2],
 			});
+	}
+	const minLevel = Math.min(...headers.map(v => v.level));
+	if(minLevel > 0){
+		headers.forEach(h => h.level -= minLevel);
 	}
 	return headers;
 }
